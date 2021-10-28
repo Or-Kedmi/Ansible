@@ -1,0 +1,10 @@
+- hosts: all
+  tasks:
+  - name: Print creating file3
+    debug: msg="Creating file3 in /home"
+  - name: Creating a file3 with content
+    copy:
+      dest: "/home/ansible_script_file3.txt"
+      content: |
+        line 01 kuku3!
+        line 02 jojo3
