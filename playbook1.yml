@@ -1,10 +1,9 @@
 - hosts: all
   tasks:
   - name: Print creating file
-    debug: msg="Creating file in /home"
+    debug: msg="Creating file ansible_script_file{{P1}} in /home"
   - name: Creating a file with content
     copy:
-      dest: "/home/ansible_script_file.txt"
+      dest: "/home/ansible_script_file{{P1}}.txt"
       content: |
-        line 01 9ol
-        line 02 jojo
+        param value: {{P1}}
