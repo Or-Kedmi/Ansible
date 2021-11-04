@@ -1,9 +1,9 @@
 - hosts: all
   tasks:
   - name: Print creating file
-    debug: msg="Creating the file '{{P1}}.txt' in /home"
+    debug: msg="Creating the file '{{P1}}.txt' at /home"
   - name: Creating a file with content
     copy:
       dest: "/home/{{P1}}.txt"
       content: |
-        param value: {{P1}}
+        p1 value: {{P1}}
